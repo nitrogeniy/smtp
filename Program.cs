@@ -7,7 +7,7 @@ namespace smtp
 	public class Program
 	{
 		private static Args A = new([]);
-		public class Args// : Dictionary<string, string>
+		public class Args
 		{
 			private readonly string[] args;
 			private readonly Dictionary<string, string> _args = [];
@@ -30,9 +30,7 @@ namespace smtp
 			{
 				get
 				{
-					//Console.WriteLine($"this key: {key}");
 					_args.TryGetValue(key, out var ret);
-					//Console.WriteLine($"ret: {ret}_{ret == string.Empty}");
 					return ret;
 				}
 			}
